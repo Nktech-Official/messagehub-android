@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "639372300514",
+    "firebase_url": "https://any-time-message-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "any-time-message",
+    "storage_bucket": "any-time-message.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:639372300514:android:2ccdeb15613f5112758ebb",
+        "android_client_info": {
+          "package_name": "tech.nktech_official.message"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "639372300514-f29pjvt3rif5frmgoojthldf0h7gkddl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaopODE_hEeWSd9kJttR4JNDY7-I3m01M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "639372300514-f29pjvt3rif5frmgoojthldf0h7gkddl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
