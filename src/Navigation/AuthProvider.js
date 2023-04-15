@@ -40,13 +40,11 @@ export const AuthProvider = ({ children }) => {
             console.log("selad login");
             setUser(auth().currentUser)
             await AsyncStorage.setItem("@login", "true")
-            console.log(await AsyncStorage.getItem("@login"));
             setInitializing(false)
         } catch (e) {
             console.log(e);
             auth().signOut().then(() => {
                 // Request to clear databaekey and session id and destroy the session after logout
-                console.log("selad login error");
 
                 axios
                     .post(
@@ -78,7 +76,6 @@ export const AuthProvider = ({ children }) => {
             setInitializing(true)
             auth().signInWithEmailAndPassword(email, password)
                 .then(async (userCredential) => {
-                    console.log(await auth().currentUser.getIdToken());
 
                     axios.post(`${BASE_URL}/session/login`,
                         {
@@ -100,7 +97,6 @@ export const AuthProvider = ({ children }) => {
                             appId, sessionId,
                             databaseKey,
                         } = res.data;
-                        console.log(res.data);
 
                         await AsyncStorage.setItem("@appId", appId)
                         await AsyncStorage.setItem("@sessionID", sessionId)

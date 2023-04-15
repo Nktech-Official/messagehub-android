@@ -1,10 +1,12 @@
-import {Box, Text} from 'native-base';
+import { Box, Text } from 'native-base';
 import React from 'react';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FloatingIcon from '../FloatingIcon';
-import {useNavigation} from '@react-navigation/native';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+import { useNavigation } from '@react-navigation/native';
+import Empty from '../Empty';
 
-export default function RecentCalls({route}) {
+export default function RecentCalls({ route }) {
   // route.params.setIc('ed');
   const navigation = useNavigation();
 
@@ -18,7 +20,7 @@ export default function RecentCalls({route}) {
           navigation.navigate('newCalls');
         }}
       />
-      <Text color="white">RecentCall</Text>
+      <Empty type={MaterialIcons} name="add-ic-call" heading="No call history" desc="call logs are shown here " />
     </Box>
   );
 }

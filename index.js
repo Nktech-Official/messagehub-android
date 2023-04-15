@@ -8,6 +8,8 @@ import { name as appName } from './app.json';
 import { NativeBaseProvider } from 'native-base';
 import { colorModeManager } from './theme';
 import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
+import { getRecentMsg } from "./config/WaterMelon"
+
 
 const MyTheme = {
   ...DefaultTheme,
@@ -17,6 +19,7 @@ const MyTheme = {
   },
 };
 function Index() {
+
   return (
     <NavigationContainer theme={MyTheme}>
       <NativeBaseProvider colorModeManager={colorModeManager}>

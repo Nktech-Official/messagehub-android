@@ -49,7 +49,6 @@ export default function Login() {
               <FormControl isRequired isInvalid={!emailVal.val}>
                 <FormControl.Label>Email ID</FormControl.Label>
                 <Input onChangeText={(e) => {
-                  console.log(e);
                   Seterror({
                     code: e,
                     error: false,
@@ -92,7 +91,6 @@ export default function Login() {
                 if (email && password && email !== "" && password !== "") {
                   login(email, password)
                 } else {
-                  console.log(email, password);
                   console.log("empty");
                 }
               }}
@@ -106,7 +104,6 @@ export default function Login() {
               {authenticate && <FormControl >
                 <FormControl.Label>OTP</FormControl.Label>
                 <Input onChangeText={(e) => {
-                  console.log(e);
                   setChallenge(e)
                 }} variant="underlined" type="text" color="amber.100" fontSize="md" mb={4}
                   placeholder="OTP" />
@@ -114,7 +111,6 @@ export default function Login() {
                   if (challenge) {
                     submitChallenge(challenge, password)
                   } else {
-                    console.log(email, password);
                     console.log("empty");
                   }
                 }}

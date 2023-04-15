@@ -15,8 +15,6 @@ export default function Routes() {
     const onAuthStateChanged = async (u) => {
         setSplash(false)
         const login = await AsyncStorage.getItem("@login")
-        console.log("u", u);
-        console.log("login", login);
         // if (u) {
         //     setUser(u)
         // }
@@ -28,9 +26,7 @@ export default function Routes() {
             const dbkey = await AsyncStorage.getItem("@databaseKey")
             const sid = await AsyncStorage.getItem("@sessionID")
 
-            console.log("ap", ap);
-            console.log("dbkey", dbkey);
-            console.log("sid", sid);
+
 
             retrieveIdentityFromLocalStorage({ appId: ap, databaseKey: dbkey, sessionID: sid })
                 .then(() => {

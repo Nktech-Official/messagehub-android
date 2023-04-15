@@ -1,10 +1,11 @@
-import {Box, Text} from 'native-base';
+import { Box, Text } from 'native-base';
 import React from 'react';
 import FloatingIcon from '../FloatingIcon';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
+import Empty from '../Empty';
 
-export default function RecentStatus({route}) {
+export default function RecentStatus({ route }) {
   // route.params.setIc('status');
   const navigation = useNavigation();
 
@@ -18,7 +19,7 @@ export default function RecentStatus({route}) {
           navigation.navigate('addStatus');
         }}
       />
-      <Text color="white">Status</Text>
+      <Empty />
     </Box>
   );
 }

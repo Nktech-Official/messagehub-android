@@ -31,12 +31,8 @@ export const retrieveIdentityFromLocalStorage = async ({
         await sleep()
         const status = await sealdSDKInstance.registrationStatus();
         if (status !== "registered") {
-            console.log(status);
-            console.log(await sealdSDKInstance.registrationStatus());
             rej(status)
         } else {
-            console.log("retrived");
-            console.log(await sealdSDKInstance.registrationStatus());
             res(status)
 
 
@@ -69,7 +65,6 @@ export const saveIdentity = async ({
     appId
 }) => {
     await instantiateSealdSDK({ databaseKey, sessionID, appId });
-    console.log(twoManRuleSessionId);
     if (!challenge) {
         await sealdSDKInstance.ssks2MR.saveIdentity({
             authFactor: {
@@ -105,10 +100,7 @@ export const retrieveIdentity = async ({
     password = false,
     appId
 }) => {
-    console.log(emailAddress);
-    console.log(twoManRuleKey);
-    console.log(challenge);
-    console.log(appId);
+
     await instantiateSealdSDK({ databaseKey, sessionID, appId });
     if (!password) {
         await sealdSDKInstance.ssks2MR.retrieveIdentity({
@@ -147,7 +139,6 @@ export const retrieveIdentity = async ({
         }
     }
     const status = await sealdSDKInstance.registrationStatus();
-    console.log(status);
 
 };
 
